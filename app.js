@@ -19,7 +19,10 @@ module.exports = (app) => {
       const repo = context.payload.repository.name;
       const workflow_id = "dispatch_test.yaml"; // The name of the workflow file
       const ref = "main"; // The branch name where the workflow is located
-
+      const inputs = {
+        "param1": "foo",
+      };
+      
       try {
         // Trigger the workflow
         await context.octokit.actions.createWorkflowDispatch({
