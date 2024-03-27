@@ -24,7 +24,7 @@ module.exports = (app) => {
       const inputs = {
         "test-param": "foo",
       };
-      app.log.info("test1");
+      console.log("test1");
       
       const err = new Error("test2");
       app.log.warn(err, "Uh-oh, this may not be good");
